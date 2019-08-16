@@ -1,0 +1,5 @@
+---
+# tasks file for oracle_java
+
+- include_tasks: jdk.yml
+  when: ansible_os_family == 'RedHat'

@@ -1,0 +1,27 @@
+---
+# Task file that downlaods and installs desired Oracle JDK RPM
+
+- name: Downloading the Java RPM package
+  get_url:
+    url: "{{ java_versions[pkg].java_download_url }}"
+    headers: Cookie:oraclelicense=accept-securebackup-cookie 
+    dest: $HOME
+  become: true
+
+- name: Installing the Java RPM package
+  yum:
+    name: "/root/{{ rpm }}" 
+    state: present
+  become: true
+
+- name: Settings alternatives
+  alternatives:
+    name="{{ item.exe }}"
+    link="/usr/bin/{{ item.exe }}"
+    path="{{ item.path }}/{{ item.exe }}"
+  with_items:
+    - { path: "{{ home }}/bin", exe: 'java' }
+    - { path: "{{ home }}/bin", exe: 'keytool' }
+    - { path: "{{ home }}/bin", exe: 'javac' }
+    - { path: "{{ home }}/bin", exe: 'javadoc' }
+  become: true

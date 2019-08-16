@@ -1,0 +1,97 @@
+---
+# defaults file for oracle_java
+
+# Role variables
+jdk_version: 8 
+jdk_update: 131
+
+# Java  version
+pkg: "{{ jdk_version }}u{{jdk_update}}"
+
+# RPM
+rpm: "jdk-{{ pkg }}-linux-x64.rpm"
+
+#  Source address
+url: "http://download.oracle.com/otn/java/jdk/{{ pkg }}/{{ rpm }}"
+
+# Install directory 
+home: "/usr/java/jdk1.{{ jdk_version }}.0_{{ jdk_update }}"
+
+java_versions:
+  7u79:
+    java_long_version: 1.7.0_79
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.rpm
+
+  7u80:
+    java_long_version: 1.7.0_80
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.rpm
+
+  8u74:
+    java_long_version: 1.8.0_74
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u74-b02/jdk-8u74-linux-x64.rpm
+
+  8u91:
+    java_long_version: 1.8.0_91
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-linux-x64.rpm
+
+  8u92:
+    java_long_version: 1.8.0_92
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-x64.rpm
+
+  8u101:
+    java_long_version: 1.8.0_101
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.rpm
+
+  8u102:
+    java_long_version: 1.8.0_102
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u102-b14/jdk-8u102-linux-x64.rpm
+
+  8u111:
+    java_long_version: 1.8.0_111
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.rpm
+
+  8u112:
+    java_long_version: 1.8.0_112
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u112-b14/jdk-8u112-linux-x64.rpm
+
+  8u121:
+    java_long_version: 1.8.0_121
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm
+
+  8u131:
+    java_long_version: 1.8.0_131
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+
+  8u141:
+    java_long_version: 1.8.0_141
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm
+
+  8u144:
+    java_long_version: 1.8.0_144
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.rpm
+
+  8u151:
+    java_long_version: 1.8.0_151
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.rpm
+
+  8u152:
+    java_long_version: 1.8.0_152
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.rpm
+
+  8u161:
+    java_long_version: 1.8.0_161
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm
+
+  8u162:
+    java_long_version: 1.8.0_162
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.rpm
+
+  8u171:
+    java_long_version: 1.8.0_171
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.rpm
+
+  8u172:
+    java_long_version: 1.8.0_172
+    java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.rpm
+
+
